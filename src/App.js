@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./assests/style.css";
+import Input from "./components/Input.js";
+import Post from "./components/Post.js";
+import { useEffect, useState } from "react";
 function App() {
+  const [noteList, setNoteList] = useState(
+    JSON.parse(localStorage.getItem("noteList")) ?? []
+  );
+  useEffect(() => {
+    localStorage.setItem("noteList", JSON.stringify(noteList));
+  }, [noteList]);
+  // window.localStorage.clear();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="main">
+        <div className="container">
+          <div className="note__control">
+            <h1 className="note-text">NOTE</h1>
+            <Input
+              setNoteList={(newNote) => {
+                setNoteList([...noteList, newNote]);
+              }}
+              noteList={noteList}
+            ></Input>
+          </div>
+          <Post noteList={noteList} setNoteList={setNoteList}></Post>
+        </div>
+      </div>
+      <div className="author">
+        Made with <i class="fa-solid fa-heart heart-icon"></i> By{" "}
+        <a href="https://github.com/pngochuy">Seal</a>
+      </div>
+    </>
   );
 }
 

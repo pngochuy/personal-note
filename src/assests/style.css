@@ -1,0 +1,332 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* DEFAULT CSS REACT */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+/*  */
+/* Container, post-control */
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+.container {
+  width: 80%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.note__control {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 40px;
+  max-width: 672px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.note-text {
+  font-size: 1.75rem;
+  line-height: 40px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+/* -------------------------------------- */
+/* Input */
+.input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-title {
+  border-width: 1px;
+  /* border-color: rgb(239 68 68);
+  outline-color: rgb(239 68 68); */
+  /* border-color: rgb(255, 0, 0); */
+  border: none;
+  outline: 3px solid #94bbe9;
+  border-radius: 8px;
+  width: 70%;
+  height: 24px;
+  padding: 10px 5px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+/* .input-title:hover {
+  outline: 3px solid rgb(239 68 68);
+} */
+.input-content {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  border: none;
+  outline: 3px solid #94bbe9;
+  border-radius: 8px;
+  width: 70%;
+  height: 50px;
+  padding: 10px 5px 20px 5px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  display: block;
+  overflow: auto;
+  resize: vertical;
+}
+/* -------------------------------------- */
+/* Button */
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  width: 30%;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 8px;
+  background-color: #22c1c3;
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+/* -------------------------------------- */
+/* Note List */
+.note__list {
+  width: 100%;
+  display: flex;
+  /* flex: 1 1 0%; */
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.note {
+  width: 22%;
+  height: fit-content;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  /* word-wrap: break-word; */
+}
+.note-detail-true {
+  padding: 20px 10px;
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(69, 146, 241, 0.467);
+}
+.note-detail-false {
+  padding: 20px 10px;
+  border-radius: 8px 8px 0 0;
+  background-color: white;
+}
+.note-detail-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+  /* overflow-wrap: break-word; */
+  word-wrap: break-word;
+}
+.note-detail-content {
+  /* overflow-wrap: break-word; */
+  word-wrap: break-word;
+}
+.note-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.delete-note {
+  background-color: rgb(230, 81, 111);
+  border-radius: 0 0 0 8px;
+}
+.delete-note:hover {
+  background-color: rgba(230, 81, 111, 0.6);
+}
+.mark-note {
+  background-color: rgb(229, 183, 69);
+  border-radius: 0 0 8px 0;
+}
+.mark-note:hover {
+  background-color: rgba(218, 165, 32, 0.6);
+}
+
+.delete-note,
+.mark-note {
+  width: 50%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 20px;
+  color: white;
+}
+/* -------------------------------------- */
+/* Author */
+.author {
+  height: 18px;
+  text-align: center;
+  background-color: #f2f2f2c9;
+  padding: 10px;
+  font-size: 14px;
+}
+.heart-icon {
+  color: #22c1c3;
+}
+a {
+  text-decoration: none;
+  color: #007bff;
+}

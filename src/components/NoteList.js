@@ -1,6 +1,6 @@
 import React from "react";
 
-function Post({ noteList, setNoteList }) {
+function NoteList({ noteList, setNoteList }) {
   const handleDeleteNote = (index) => {
     const newNoteList = noteList.filter(
       (note, indexNote) => indexNote !== index
@@ -99,4 +99,4 @@ function Post({ noteList, setNoteList }) {
   );
 }
 
-export default Post;
+export default NoteList;

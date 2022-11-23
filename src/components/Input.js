@@ -1,7 +1,7 @@
 import React from "react";
 import "../assests/style.css";
 import { useState, useRef } from "react";
-function InputTitle({ setNoteList, noteList }) {
+function Input({ setNoteList, noteList }) {
   const [newNote, setNewNote] = useState({
     count: 1,
     title: "",
@@ -73,4 +73,4 @@ function InputTitle({ setNoteList, noteList }) {
   );
 }
 
-export default InputTitle;
+export default Input;

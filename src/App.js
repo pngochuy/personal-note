@@ -1,6 +1,6 @@
 import "./assests/style.css";
 import Input from "./components/Input.js";
-import Post from "./components/Post.js";
+import NoteList from "./components/NoteList.js";
 import { useEffect, useState } from "react";
 function App() {
   const [noteList, setNoteList] = useState(
@@ -23,7 +23,7 @@ function App() {
               noteList={noteList}
             ></Input>
           </div>
-          <Post noteList={noteList} setNoteList={setNoteList}></Post>
+          <NoteList noteList={noteList} setNoteList={setNoteList}></NoteList>
         </div>
       </div>
       <div className="author">
